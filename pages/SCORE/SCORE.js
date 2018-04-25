@@ -7,10 +7,8 @@ Page({
   data: {
     result: null,
     age: "",
-    sex: 0,
-    sexname: "男",
-    smoker: 0,
-    smokername: "否",
+    sex: false,
+    smoker: false,
     tc: "",
     tcfix2: "",
     tc_unit: "mmol/L",
@@ -48,29 +46,23 @@ Page({
       result: null,
     })
   },
-  // bindsexChange: function (e) {
-  //   this.setData({
-  //     sexname: this.data.sexArr[e.detail.value],
-  //     sex: e.detail.value,
-  //     result: null,
-  //   })
-  // },
   switchSexChange: function (e) {
+    var sex = false;
+    if (e.detail.value == 1) {
+      sex = true;
+    }
     this.setData({
-      sex: e.detail.value,
+      sex: sex,
       result: null,
     })
   },
-  // bindsmokerChange: function (e) {
-  //   this.setData({
-  //     smokername: this.data.smokerArr[e.detail.value],
-  //     smoker: e.detail.value,
-  //     result: null,
-  //   })
-  // },
   switchSmokerChange: function (e) {
+    var smoker = false;
+    if (e.detail.value == 1) {
+      smoker = true;
+    }
     this.setData({
-      smoker: e.detail.value,
+      smoker: smoker,
       result: null,
     })
   },

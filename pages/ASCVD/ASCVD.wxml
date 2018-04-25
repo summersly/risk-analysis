@@ -1,2 +1,81 @@
 <!--pages/ASCVD/ASCVD.wxml-->
-<text>pages/ASCVD/ASCVD.wxml</text>
+<view class='container'>
+  <view class='input-item' style='height:10px'></view>
+  <view class='input-item'>
+    <view class='input-item-title'>年龄</view>
+    <view class='input-item-bd'>
+      <input type='number' class='bd' value='{{age}}' bindinput='bindInputAge' />
+    </view>
+    <view class='input-item-unit'>years</view>
+  </view>
+  <view wx:if="{{ageWarn}}" class='warning'>请检查年龄输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>性别</view>
+    <radio-group class='input-item-bd' style='border:0px' bindchange="switchSexChange">
+      <radio class='switch-text' value='0' checked='{{!sex}}'>男</radio>
+      <radio class='switch-text' value='1' checked='{{sex}}'>女</radio>
+    </radio-group>
+  </view>
+  <view class='input-item'>
+    <view class='input-item-title'>是否吸烟</view>
+    <radio-group class='input-item-bd' style='border:0px' bindchange="switchSmokerChange">
+      <radio class='switch-text' value='0' checked='{{!smoker}}'>否</radio>
+      <radio class='switch-text' value='1' checked='{{smoker}}'>是</radio>
+    </radio-group>
+  </view>
+  <view class='input-item'>
+    <view class='input-item-title'>糖尿病患者</view>
+    <radio-group class='input-item-bd' style='border:0px' bindchange="switchDiabetesChange">
+      <radio class='switch-text' value='0' checked='{{!diabetes}}'>否</radio>
+      <radio class='switch-text' value='1' checked='{{diabetes}}'>是</radio>
+    </radio-group>
+  </view>
+  <view class='input-item'>
+    <view class='input-item-title change' bindtap='bindLDLItemChange'>{{ldl_item}}</view>
+    <view class='input-item-bd'>
+      <input type='digit' class='bd' placeholder="例如:2.5" value='{{ldlfix2}}' bindinput='bindInputLdl' />
+    </view>
+    <view class='input-item-unit' bindtap='bindLDLUnitChange'>{{ldl_unit}}</view>
+  </view>
+  <view wx:if="{{ldlWarn}}" class='warning'>请检查{{ldl_item}}输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>HDL-C</view>
+    <view class='input-item-bd'>
+      <input type='digit' class='bd' placeholder="例如:1.2" value='{{hdlfix2}}' bindinput='bindInputHdl' />
+    </view>
+    <view class='input-item-unit' bindtap='bindHDLUnitChange'>{{hdl_unit}}</view>
+  </view>
+  <view wx:if="{{hdlWarn}}" class='warning'>请检查HDL-C输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>收缩压</view>
+    <view class='input-item-bd'>
+      <input type='number' class='bd' value='{{sbp}}' bindinput='bindInputSbp' />
+    </view>
+    <view class='input-item-unit'>mmHg</view>
+  </view>
+  <view wx:if="{{sbpWarn}}" class='warning'>请检查血压输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>舒张压</view>
+    <view class='input-item-bd'>
+      <input type='number' class='bd' value='{{dbp}}' bindinput='bindInputDbp' />
+    </view>
+    <view class='input-item-unit'>mmHg</view>
+  </view>
+  <view wx:if="{{dbpWarn}}" class='warning'>请检查血压输入是否有误</view>
+  <view style='width:100%;height:110px'></view>
+  <view class='result-item' style='Z-index:10'>
+    <view class='result-item-context' style=' width: 60%;'>
+      <view class='result-item-title'>ASCVD十年风险：</view>
+      <view wx:if="{{result!=null}}" class='result-item-score'>{{result}} </view>
+      <view wx:if="{{(resultlevel==1)&&(age<55)&&(age>0)}}" bindtap='MoreRiskJudge'>▶评估余生危险</view>
+    </view>
+    <view class='result-item-context' style='margin-top:-10px'>
+      <button bindtap='RiskLevelJudge'>
+        <text>Calculate</text>
+      </button>
+      <button bindtap='clear'>
+        <text>Clear</text>
+      </button>
+    </view>
+  </view>
+</view>

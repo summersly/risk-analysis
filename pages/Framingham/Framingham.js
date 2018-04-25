@@ -6,12 +6,9 @@ Page({
    */
   data: {
     age: "",
-    sex: 0,
-    sexname: "男",
-    smoker: 0,
-    smokername: "否",
-    diabetes: 0,
-    diabname: "否",
+    sex: false,
+    smoker: false,
+    diabetes: false,
     ldl: "",
     hdl: "",
     ldlfix2: "",
@@ -71,41 +68,33 @@ Page({
     })
   },
   switchSexChange: function (e) {
+    var sex = false;
+    if (e.detail.value == 1) {
+      sex = true;
+    }
+    console.log(sex)
     this.setData({
-      sex: e.detail.value,
+      sex: sex,
       result: null,
     })
   },
   switchSmokerChange: function (e) {
+    var smoker = false;
+    if (e.detail.value == 1) {
+      smoker = true;
+    }
     this.setData({
-      smoker: e.detail.value,
+      smoker: smoker,
       result: null,
     })
   },
   switchDiabetesChange: function (e) {
+    var diabetes = false;
+    if (e.detail.value == 1) {
+      diabetes = true;
+    }
     this.setData({
-      diabetes: e.detail.value,
-      result: null,
-    })
-  },
-  bindsexChange: function (e) {
-    this.setData({
-      sexname: this.data.sexArr[e.detail.value],
-      sex: e.detail.value,
-      result: null,
-    })
-  },
-  bindsmokerChange: function (e) {
-    this.setData({
-      smokername: this.data.smokerArr[e.detail.value],
-      smoker: e.detail.value,
-      result: null,
-    })
-  },
-  binddiabChange: function (e) {
-    this.setData({
-      diabname: this.data.diabArr[e.detail.value],
-      diabetes: e.detail.value,
+      diabetes: diabetes,
       result: null,
     })
   },
@@ -139,7 +128,7 @@ Page({
         ldl_item: "TC",
         ldl: "",
         ldlfix2: "",
-        result:null,
+        result: null,
       })
     }
     else {
@@ -147,7 +136,7 @@ Page({
         ldl_item: "LDL-C",
         ldl: "",
         ldlfix2: "",
-        result:null,
+        result: null,
       })
     }
   },
@@ -377,7 +366,8 @@ Page({
       ageWarn: false,
       sbpWarn: false,
       ldlWarn: false,
-      hdlWarn: false
+      hdlWarn: false,
+      dbpWarn: false,
     })
     var sex = this.data.sex, step2, ldlortc;
     if (this.data.ldl_item == "LDL-C") {
@@ -511,7 +501,7 @@ Page({
     }
   },
 
-  clear:function(){
+  clear: function () {
     this.setData({
       age: "",
       sex: 0,
@@ -526,7 +516,7 @@ Page({
       hdl_unit: "mmol/L",
       sbp: "",
       dbp: "",
-      result:null,
+      result: null,
       ageWarn: false,
       ldlWarn: false,
       hdlWarn: false,

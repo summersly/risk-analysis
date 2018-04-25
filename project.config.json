@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -45,6 +45,17 @@
 					"name": "F",
 					"pathName": "pages/Framingham/Framingham",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ASCVD",
+					"pathName": "pages/ASCVD/ASCVD",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ASCVD2",
+					"pathName": "pages/ASCVD/ASCVD2"
 				}
 			]
 		}

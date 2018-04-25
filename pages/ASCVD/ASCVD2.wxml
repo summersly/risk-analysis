@@ -1,0 +1,27 @@
+<!--pages/ASCVD/ASCVD2.wxml-->
+<view class='container'>
+  <view class='input-item'>
+    <view class='input-item-title'>身高</view>
+    <view class='input-item-bd'>
+      <input type='number' class='bd' value='{{height}}' bindinput='bindInputHeight' />
+    </view>
+    <view class='input-item-unit'>cm</view>
+  </view>
+  <view wx:if="{{heightWarn}}" class='warning'>请检查身高输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>体重</view>
+    <view class='input-item-bd'>
+      <input type='digit' class='bd' value='{{weight}}' bindinput='bindInputWeight' />
+    </view>
+    <view class='input-item-unit'>Kg</view>
+  </view>
+  <view wx:if="{{weightWarn}}" class='warning'>请检查体重输入是否有误</view>
+  <view class='input-item'>
+    <view class='input-item-title'>非-HDL-C</view>
+    <view class='input-item-bd'>
+      <input type='digit' class='bd' placeholder="" value='{{nhdlfix2}}' bindinput='bindInputNHdl' />
+    </view>
+    <view class='input-item-unit' bindtap='bindNHDLUnitChange'>{{nhdl_unit}}</view>
+  </view>
+  <view wx:if="{{nhdlWarn}}" class='warning'>请检查非-HDL-C输入是否有误</view>
+</view>

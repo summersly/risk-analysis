@@ -2,7 +2,8 @@
   "pages": [
     "pages/SCORE/SCORE",
     "pages/Framingham/Framingham",
-    "pages/ASCVD/ASCVD"
+    "pages/ASCVD/ASCVD",
+    "pages/ASCVD/ASCVD2"
   ],
   "window": {
     "backgroundTextStyle": "light",
