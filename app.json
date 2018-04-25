@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/SCORE/SCORE",
+    "pages/Framingham/Framingham",
+    "pages/ASCVD/ASCVD"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "风险评估系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#3e9afe",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/score_fill.png",
+        "iconPath": "image/score.png",
+        "pagePath": "pages/SCORE/SCORE",
+        "text": "SCORE"
+      },
+      {
+        "selectedIconPath": "image/framingham_fill.png",
+        "iconPath": "image/framingham.png",
+        "pagePath": "pages/Framingham/Framingham",
+        "text": "Framingham"
+      },
+      {
+        "selectedIconPath": "image/ascvd_fill.png",
+        "iconPath": "image/ascvd.png",
+        "pagePath": "pages/ASCVD/ASCVD",
+        "text": "ASCVD"
+      }
+    ]
+  }
+}

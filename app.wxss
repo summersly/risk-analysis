@@ -1,0 +1,113 @@
+/**app.wxss**/
+
+button {
+  margin-top: 6px;
+  height: 30px;
+  margin-right: 5%;
+  width: 110px;
+  font-size: 18px;
+  display: table;
+}
+
+button text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-item {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.input-item-title {
+  width: 30%;
+}
+
+.input-item-bd {
+  margin-left: 10%;
+  width: 30%;
+  height: 70%;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+}
+
+.input-item-unit {
+  height: 70%;
+  width: 20%;
+  margin-left: 2%;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+picker {
+  width: 100%;
+}
+
+.bd {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.result-item {
+  background-color: #40e0d0;
+  margin-top: 20px;
+  border-top: 1px solid gainsboro;
+  padding: 10px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.result-item-context {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-right: 5%;
+
+}
+
+.result-item-title {
+  font-size: 22px;
+  font-weight: bolder;
+ 
+}
+
+.result-item-score {
+  font-size: 30px;
+  /* margin-left: 5%; */
+  font-weight: bolder;
+}
+
+.warning {
+  background-color: gold;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.switch-text {
+  margin-left: 10%;
+  margin-right: 10%;
+}
