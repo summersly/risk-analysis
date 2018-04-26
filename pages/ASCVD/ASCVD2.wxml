@@ -24,4 +24,20 @@
     <view class='input-item-unit' bindtap='bindNHDLUnitChange'>{{nhdl_unit}}</view>
   </view>
   <view wx:if="{{nhdlWarn}}" class='warning'>请检查非-HDL-C输入是否有误</view>
+
+  <view style='width:100%;height:110px'></view>
+  <view class='result-item' style='Z-index:10'>
+    <view class='result-item-context' style=' width: 60%;'>
+      <view class='result-item-title'>ASCVD余生危险：</view>
+        <view wx:if="{{result!=null}}" class='result-item-score'>{{result}}</view>
+    </view>
+    <view class='result-item-context' style='margin-top:-10px'>
+      <button bindtap='calculate'>
+        <text>Calculate</text>
+      </button>
+      <button bindtap='clear'>
+        <text>Clear</text>
+      </button>
+    </view>
+  </view>
 </view>

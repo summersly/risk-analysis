@@ -21,7 +21,7 @@ Page({
     ldlLevel: 0,
     RiskFactorNum: 0,
     hypertension: false,
-    resultlevel:0,
+    resultlevel: 0,
     result: null,
     RiskName: ["低危(<5%)", "中危(5%-9%)", "高危(≥10%)"],
     NormLevel: [[0, 0, 0], [0, 0, 0], [0, 0, 1], [0, 1, 1]],
@@ -37,6 +37,7 @@ Page({
     this.setData({
       age: e.detail.value,
       result: null,
+      resultlevel:0,
     })
   },
   switchSexChange: function (e) {
@@ -47,6 +48,7 @@ Page({
     this.setData({
       sex: sex,
       result: null,
+      resultlevel: 0,
     })
   },
   switchSmokerChange: function (e) {
@@ -57,6 +59,7 @@ Page({
     this.setData({
       smoker: smoker,
       result: null,
+      resultlevel: 0,
     })
   },
   switchDiabetesChange: function (e) {
@@ -67,30 +70,35 @@ Page({
     this.setData({
       diabetes: diabetes,
       result: null,
+      resultlevel: 0,
     })
   },
   bindInputLdl: function (e) {
     this.setData({
       ldl: e.detail.value,
       result: null,
+      resultlevel: 0,
     })
   },
   bindInputHdl: function (e) {
     this.setData({
       hdl: e.detail.value,
       result: null,
+      resultlevel: 0,
     })
   },
   bindInputSbp: function (e) {
     this.setData({
       sbp: e.detail.value,
       result: null,
+      resultlevel: 0,
     })
   },
   bindInputDbp: function (e) {
     this.setData({
       dbp: e.detail.value,
       result: null,
+      resultlevel: 0,
     })
   },
   bindLDLItemChange: function () {
@@ -100,6 +108,7 @@ Page({
         ldl: "",
         ldlfix2: "",
         result: null,
+        resultlevel: 0,
       })
     }
     else {
@@ -108,6 +117,7 @@ Page({
         ldl: "",
         ldlfix2: "",
         result: null,
+        resultlevel: 0,
       })
     }
   },
@@ -347,10 +357,10 @@ Page({
     var RiskFactorNum = this.data.RiskFactorNum;
     var ldlLevel = this.data.ldlLevel;
     var hypertension = this.data.hypertension;
-    var tag=0;
+    var tag = 0;
     if (hypertension) {
       //hypertension
-      tag=this.data.HyperLevel[RiskFactorNum][ldlLevel];
+      tag = this.data.HyperLevel[RiskFactorNum][ldlLevel];
     }
     else {
       tag = this.data.NormLevel[RiskFactorNum][ldlLevel];
@@ -377,6 +387,9 @@ Page({
       hdl_unit: "mmol/L",
       sbp: "",
       dbp: "",
+      ldlLevel: 0,
+      RiskFactorNum: 0,
+      hypertension: false,
       resultlevel: 0,
       result: null,
       ageWarn: false,
@@ -386,10 +399,22 @@ Page({
       dbpWarn: false,
     })
   },
-  MoreRiskJudge:function(){
+  MoreRiskJudge: function () {
     //添加判断传参
+    var BpRisk = false, SmokerRisk = false, HdlRisk = false;
+    var hdl = this.data.hdl;
+    if (this.data.sbp >= 160 || this.data.dbp >= 100) {
+      BpRisk = true;
+    }
+    if (this.data.hdl_unit == 'mg/dL') {
+      hdl = hdl / 38.61;
+    }
+    if (hdl < 1.0) {
+      HdlRisk = true;
+    }
+    SmokerRisk=this.data.smoker;
     wx.navigateTo({
-      url: 'ASCVD2',
+      url: 'ASCVD2?BpRisk=' + BpRisk + '&SmokerRisk=' + SmokerRisk + '&HdlRisk=' + HdlRisk,
     })
   },
   /**
