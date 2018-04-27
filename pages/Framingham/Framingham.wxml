@@ -88,7 +88,7 @@
   <view wx:if="{{dbpWarn}}" class='warning'>请检查血压输入是否有误</view>
   <view style='width:100%;height:110px'></view>
   <view class='result-item' style='Z-index:10'>
-    <view class='result-item-context' style=' width: 60%;'>
+    <view class='result-item-context' style=' width:70%;'>
       <view class='result-item-title'>CHD十年风险：</view>
       <view style='display: flex;'>
         <view wx:if="{{result==56||result==53||result==32||(result==27&&ldl_item=='TC')}}" class='result-item-score'>≥</view>

@@ -27,7 +27,7 @@
 
   <view style='width:100%;height:110px'></view>
   <view class='result-item' style='Z-index:10'>
-    <view class='result-item-context' style=' width: 60%;'>
+    <view class='result-item-context' style=' width:70%;'>
       <view class='result-item-title'>ASCVD余生危险：</view>
         <view wx:if="{{result!=null}}" class='result-item-score'>{{result}}</view>
     </view>

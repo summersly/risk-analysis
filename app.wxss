@@ -1,17 +1,19 @@
 /**app.wxss**/
 
 button {
-  margin-top: 6px;
+  margin-top: 13px;
   height: 30px;
   margin-right: 5%;
-  width: 110px;
-  font-size: 18px;
+  width: 100px;
   display: table;
 }
 
 button text {
   display: table-cell;
   vertical-align: middle;
+  font-size: 15px;
+  height: 15px;
+
 }
 
 .container {
@@ -85,8 +87,8 @@ picker {
 }
 
 .result-item-title {
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 18px;
+  font-weight: bold;
  
 }
 
