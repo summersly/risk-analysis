@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.98",
+	"libVersion": "2.2.1",
 	"appid": "wx955e15712c722b15",
 	"projectname": "risk_analysis",
 	"condition": {
@@ -32,12 +32,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "score",
-					"pathName": "pages/SCORE/SCORE",
+					"pathName": "pages/rvd/SCORE/SCORE",
 					"query": ""
 				},
 				{
@@ -47,15 +47,27 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "ASCVD",
-					"pathName": "pages/ASCVD/ASCVD",
+					"pathName": "pages/rvd/ASCVD/ASCVD",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "ASCVD2",
+					"pathName": "pages/rvd/remain-risk/remain-risk",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "stomach",
+					"pathName": "pages/stomach/stomach",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "ASCVD2",
-					"pathName": "pages/ASCVD/ASCVD2",
+					"name": "rvd",
+					"pathName": "pages/rvd/rvd",
 					"query": ""
 				}
 			]

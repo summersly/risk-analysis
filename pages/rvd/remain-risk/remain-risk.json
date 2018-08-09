@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+      "num-input": "../../../component/common/num-input/num-input",
+      "radio-input": "../../../component/common/radio-input/radio-input",
+      "result-footer": "../../../component/common/result-footer/result-footer"
+    },
+    "navigationBarTitleText": "ASCVD余生危险"
+}

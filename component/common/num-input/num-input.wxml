@@ -1,0 +1,12 @@
+<!--component/num-input/num-input.wxml-->
+  <view class='number-input'>
+    <view class="input-name">
+      <lable class="{{model.labelList.length > 1?'label-changename':''}}" bindtap="changeLabel">{{model.labelList[model.labelIndex]}}</lable>
+    </view>
+    <view class="input-item" class="{{model.isWarning?'warning input-item':'input-item'}}">
+      <input type='digit' value="{{model.value}}"  bindinput="changeValue" bindblur='rangeJudgement'/>
+    </view>
+    <view class="input-unit">
+      <option-select selectData="{{model.selectData}}" bindchangeOption='changeOption' />
+    </view>
+  </view>

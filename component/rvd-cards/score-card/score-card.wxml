@@ -1,0 +1,10 @@
+<!--component/score-card/score-card.wxml-->
+<scroll-view scroll-y style="height:72vh;">
+  <num-input model="{{ageModel}}" bindmychange='changeAgeParam' />
+  <radio-input model="{{sexModel}}" bindmychange='changeSexSelect' />
+  <radio-input model="{{smokerModel}}" bindmychange='changeSmokerSelect' />
+  <num-input model="{{tcModel}}" bindmychange='changeTCParam' />
+  <num-input model="{{sbpModel}}" bindmychange='changeSbpParam' />
+  <view style='width：100%;height:50px'></view>
+</scroll-view>
+<result-footer title="致命性CVD十年风险" result="{{riskResult}}" bindcalculateclick="calcResult" bindclearclick="clearInput" />

@@ -1,0 +1,9 @@
+<!--pages/stomach/stomach.wxml-->
+<top-tabbar tabbarData='{{tabbarData}}'>
+  <view slot="toptab0">
+   <three-items-card />
+  </view>
+  <view slot="toptab1">
+   <four-items-card />
+  </view>
+</top-tabbar>

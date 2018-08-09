@@ -1,0 +1,12 @@
+<!--pages/rvd/rvd.wxml-->
+<top-tabbar tabbarData='{{tabbarData}}'>
+  <view slot="toptab0">
+    <score-card />
+  </view>
+  <view slot="toptab1">
+    <framingham-card />
+  </view>
+  <view slot="toptab2">
+    <ascvd-card />
+  </view>
+</top-tabbar>

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+      "top-tabbar": "../../../component/common/top-tabbar/top-tabbar",
+      "score-card": "../../../component/rvd-cards/score-card/score-card",
+      "framingham-card": "../../../component/rvd-cards/framingham-card/framingham-card",
+      "ascvd-card": "../../../component/rvd-cards/ascvd-card/ascvd-card"
+    },
+    "navigationBarTitleText": "心血管风险评估"
+}

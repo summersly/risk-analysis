@@ -1,0 +1,5 @@
+<!--pages/rvd/remain-risk/remain-risk.wxml-->
+<num-input model="{{heightModel}}" bindmychange='changeHeightParam' />
+<num-input model="{{weightModel}}" bindmychange='changeWeightParam' />
+<num-input model="{{nHdlModel}}" bindmychange='changenHdlParam' />
+<result-footer title="ASCVD余生风险" result="{{riskResult}}" bindcalculateclick="calcResult" bindclearclick="clearInput" />
