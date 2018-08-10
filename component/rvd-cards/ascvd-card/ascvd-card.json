@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "num-input": "../../common/num-input/num-input",
-    "radio-input": "../../common/radio-input/radio-input",
-    "result-footer": "../../common/result-footer/result-footer"
-    }
-}

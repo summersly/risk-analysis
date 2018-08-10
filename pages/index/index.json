@@ -1,2 +1,5 @@
-{
-}
+{  
+  "usingComponents": {
+    "home-card": "/components/home-card/home-card"
+  }
+} 

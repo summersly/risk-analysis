@@ -1,53 +1,12 @@
-<!--pages/index/index.wxml-->
-<view style='padding-top:20rpx;'>
-  <view class='head_cont'>
-    <view class='head_write'></view>
-    <label class='head_title'>请选择评估项目</label>
+<view class="container">
+  <view class="home-container">
+    <home-card 
+      wx:for="{{calculatorList}}"
+      wx:key="key"
+      name="{{item.name}}"
+      icon="{{item.icon}}"
+      route="{{item.route}}"
+    >
+    </home-card>
   </view>
-
-  <view>
-    <view class="names " bindtap="onChangeShowState_rvd">
-      <image class='name_img' src='../../image/rvd.png'></image>
-      <label class='name'>
-        心血管风险评估工具
-      </label>
-      <image class='shows_img' src='{{rvd_show? "../../image/up.png":"../../image/down.png"}}'></image>
-    </view>
-
-    <view class="{{rvd_show?'show':'hide'}}">
-      <navigator url='../rvd/rvd' class='list'>
-        <label class='list_name'>SCORE</label>
-      </navigator>
-      <navigator url='../rvd/rvd'class='list'>
-        <label class='list_name'>Framingham</label>
-      </navigator>
-      <navigator url='../rvd/rvd'class='list'>
-        <label class='list_name'>ASCVD</label>
-      </navigator>
-    </view>
-  </view>
-
-  <view>
-
-    <view class="names  " bindtap="onChangeShowState_stomach">
-      <image class='name_img' src='../../image/stomach.png'></image>
-      <label class='name'>
-        胃功能评估工具
-      </label>
-      <image class='shows_img' src='{{stomach_show? "../../image/up.png":"../../image/down.png"}}'></image>
-    </view>
-
-    <view class="{{stomach_show?'show':'hide'}}">
-      <navigator url='../stomach/stomach' class='list'>
-        <label  class='list_name'>三项指标</label>
-      </navigator>
-      <navigator url='../stomach/stomach' class='list'>
-        <label  class='list_name'>四项指标</label>
-      </navigator>
-    </view>
-
-  </view>
-
 </view>
-<!-- <option-select selectData="{{selectData}}" bindchangeOption='changeOption'/> -->
-<num-input model="{{tcModel}}" />

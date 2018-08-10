@@ -1,8 +1,8 @@
 {
     "usingComponents": {
-      "num-input": "../../../component/common/num-input/num-input",
-      "radio-input": "../../../component/common/radio-input/radio-input",
-      "result-footer": "../../../component/common/result-footer/result-footer"
+      "num-input": "../../../components/common/num-input/num-input",
+      "radio-input": "../../../components/common/radio-input/radio-input",
+      "result-footer": "../../../components/common/result-footer/result-footer"
     },
     "navigationBarTitleText": "ASCVD余生危险"
 }

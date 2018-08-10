@@ -1,9 +1,0 @@
-<!--component/stomach-cards/three-items/three-items.wxml-->
-<scroll-view scroll-y style="height:72vh;">
-  <num-input model="{{ageModel}}" bindmychange='changeAgeParam' />
-  <radio-input model="{{sexModel}}" bindmychange='changeSexSelect' />
-  <num-input model="{{pgrModel}}" bindmychange='changePGRaram' />
-  <num-input model="{{g17Model}}" bindmychange='changeG17Param' />
-  <view style='width：100%;height:50px'></view>
-</scroll-view>
-<result-footer result="{{riskResult}}" bindcalculateclick="calcResult" bindclearclick="clearInput" />

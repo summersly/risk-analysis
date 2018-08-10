@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "top-tabbar": "../../../component/common/top-tabbar/top-tabbar",
-    "three-items-card": "../../../component/stomach-cards/three-items/three-items",
-    "four-items-card": "../../../component/stomach-cards/four-items/four-items"
+    "top-tabbar": "../../../components/common/top-tabbar/top-tabbar",
+    "three-items-card": "../../../components/stomach-cards/three-items/three-items",
+    "four-items-card": "../../../components/stomach-cards/four-items/four-items"
   },
   "navigationBarTitleText": "胃功能风险评估"
 }

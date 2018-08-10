@@ -1,0 +1,21 @@
+<!--components/option-select/option-select.wxml-->
+<!-- 下拉框组件html结构（子组件） -->
+  <view class="select-box" bindtap="changeStatus">
+	  <!-- changeStatus事件: 点击实现下拉框的显示和隐藏  -->
+		<view class="{{selectData.selectDisable? 'select-title-disable':'select-title'}}+{{selectStatus?'select-title-active':'' }}" wx:if='{{selectData.selectOptions[selectData.defaultIndex].context.length}}'> 
+	    <!--属性name class的动态绑定-->
+			{{ selectData.selectOptions[selectData.defaultIndex].context }} 
+	    <!--这里主要绑定选择的数据-->
+		</view>
+
+		<view class="select-options" wx:if="{{selectStatus}}">
+				<view wx:for="{{selectData.selectOptions}}"
+					wx:key="{{item.index}}"
+					bindtap="EmitchangeOption"
+          data-index='{{item.index}}'
+					class="{{selectData.defaultIndex==item.index?'select-option-active select-option-item':'select-option-item'}}">
+					{{ selectData.selectOptions[index].context }}
+				</view>
+				<view class="arrow-top"></view>
+		</view>	
+	</view> 

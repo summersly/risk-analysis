@@ -1,0 +1,8 @@
+<view class="basic-card" bindtap="toDesRoute">
+  <image src="{{icon}}"/>
+  <view></view>
+  <view>
+    <text>{{ name }}</text>
+    <text>评估工具</text>
+  </view>
+</view>
